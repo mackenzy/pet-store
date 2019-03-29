@@ -1,25 +1,26 @@
 # Pet Store 
 
-##Author
+## Author
 Matthew Ilichov   
 matvey.ilyichov@gmail.com
+https://www.linkedin.com/in/matthew-ilichov-28720123/
 
-##Requirements
+## Requirements
 java 1.8+   
 stb 1.0.4+   
 scala 2.12.8+
 
-##Configs and DB
+## Configs and DB
 Config for DB is located at src/main/resources/application.conf.   
 DB is located at src/main/resources/sqlite.db by default config. It is possible to change path to DB by updating "sqllite.driver.db.url" key at config file correspondingly. 
 
-##Compile and run
+## Compile and run
 ```
 sbt clean "runMain ua.mackenzy.api.PetStoreApp"
 ```
-##API
+## API
 
-###Add a new pet
+### Add a new pet   
 **request:**
 ```
 curl -X POST \
@@ -41,7 +42,7 @@ curl -X POST \
 }
 ```
 
-###Get pet by id
+### Get pet by id   
 **request:**
 ```
 curl -X GET http://localhost:8080/pet/5
@@ -60,7 +61,7 @@ curl -X GET http://localhost:8080/pet/5
 ```
 
 
-###Get all pets
+### Get all pets   
 **request:**
 ```
 curl -X GET http://localhost:8080/pets
@@ -114,7 +115,7 @@ curl -X GET http://localhost:8080/pets
 ]
 ```
 
-###Place an order
+### Place an order   
 **request:**
 ```
 curl -X POST \
@@ -132,7 +133,7 @@ curl -X POST \
 }
 ```
 
-###Get order info by Order ID
+### Get order info by Order ID   
 **request:**
 ```
 curl -X GET http://localhost:8080/store/order/1
@@ -159,7 +160,7 @@ curl -X GET http://localhost:8080/store/order/1
 }
 ```
 
-###Update status of an order
+### Update status of an order   
 **request:**
 ```
 curl -X PUT \
@@ -170,7 +171,7 @@ curl -X PUT \
 }'
 ```
 
-###Create new user
+### Create new user   
 **request:**
 ```
 curl -X POST \
@@ -186,7 +187,7 @@ curl -X POST \
    "id": 4
 }
 ```
-###Get user by ID
+### Get user by ID   
 **request:**
 ```
 curl -X GET http://localhost:8080/user/4 
@@ -198,7 +199,7 @@ curl -X GET http://localhost:8080/user/4
     "name": "John Cena"
 }
 ```
-###Get all users
+### Get all users   
 **request:**
 
 ```
